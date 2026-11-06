@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reserve a Seat for a Student</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Reserve a Seat for a Student</legend>
+	<form method="get" action="./rest/Section/reserveForm">
+		<label class="field" for="studentIdParam">Student Id:</label>
+		<input type="text" id="studentIdParam" name="studentIdParam"><br>
+		<input type="submit" value="Search Student">
+		<input type="reset" value="Cancel">
+	</form>
+	<p class="note">For the staff, when a student registers at the counter: Search Student reads the student
+	from the Student table and opens the reservation form. A student who is logged in does not use this page;
+	the menu opens the student's own reservation form directly.</p>
+</fieldset>
+
+</body>
+</html>

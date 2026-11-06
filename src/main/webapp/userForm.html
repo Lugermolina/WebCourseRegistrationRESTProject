@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Staff Account Form</title>
+<link rel="stylesheet" href="style.css?v=4">
+<script src="eye.js"></script>
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Staff Account Form</legend>
+	<form method="post">
+		<label class="field" for="userIdParam">Account Id:</label>
+		<input type="text" id="userIdParam" name="userIdParam" placeholder="assigned by the system on Add"><br>
+		<label class="field" for="usernameParam">Username:</label>
+		<input type="text" id="usernameParam" name="usernameParam" required><br>
+		<label class="field" for="passwordParam">Password (6 or more):</label>
+		<input type="password" id="passwordParam" name="passwordParam"><button type="button" class="eye" onclick="togglePassword(this)" title="Show or hide the password"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M1 8 Q12 -4 23 8 Q12 20 1 8 Z" fill="none" stroke="black" stroke-width="1.5"/><circle cx="12" cy="8" r="3" fill="black"/><line x1="3" y1="15" x2="21" y2="1" stroke="black" stroke-width="1.8"/></svg></button><br>
+		<label class="field" for="roleParam">Access level:</label>
+		<select id="roleParam" name="roleParam">
+			<option value="CLERK">Clerk</option>
+			<option value="MANAGER">Manager</option>
+			<option value="ADMIN">Admin</option>
+		</select><br>
+		<input type="submit" value="Add Account" formaction="./rest/User/add">
+		<input type="submit" value="Update Account" formaction="./rest/User/update">
+		<input type="submit" value="Search Account" formaction="./rest/User/find" formnovalidate>
+		<input type="submit" value="Delete Account" formaction="./rest/User/delete" formnovalidate>
+	</form>
+	<p class="note">Add: the id is assigned by the system. Search: enter the id; the form comes back filled from the table.
+	Update: change the fields of the record found and press Update. Delete: only the id is used.</p>
+</fieldset>
+
+</body>
+</html>

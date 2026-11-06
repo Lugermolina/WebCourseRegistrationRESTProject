@@ -1,0 +1,13 @@
+# build output
+target/
+build/
+
+# documents kept outside the repository
+*.docx
+*.pptx
+*.pdf
+~$*
+screenshots/
+
+# transactions written while testing
+data/*.out

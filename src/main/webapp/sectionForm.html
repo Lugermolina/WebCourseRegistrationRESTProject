@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Section Form</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Section Form</legend>
+	<form method="post">
+		<label class="field" for="sectionIdParam">Section Id:</label>
+		<input type="text" id="sectionIdParam" name="sectionIdParam" placeholder="assigned by the system on Add"><br>
+		<label class="field" for="courseCodeParam">Course code:</label>
+		<input type="text" id="courseCodeParam" name="courseCodeParam" placeholder="SE401" required>
+		<a href="rest/Course" target="_blank">list</a><br>
+		<label class="field" for="instructorIdParam">Instructor Id:</label>
+		<input type="text" id="instructorIdParam" name="instructorIdParam" required>
+		<a href="rest/Instructor" target="_blank">list</a><br>
+		<label class="field" for="semesterParam">Semester:</label>
+		<select id="semesterParam" name="semesterParam">
+			<option>Fall</option>
+			<option>Winter</option>
+		</select><br>
+		<label class="field" for="yearParam">Year:</label>
+		<input type="text" id="yearParam" name="yearParam" placeholder="2027" required><br>
+		<label class="field" for="daysParam">Days:</label>
+		<select id="daysParam" name="daysParam">
+			<option>Mon/Wed</option>
+			<option>Tue/Thu</option>
+			<option>Mon/Wed/Fri</option>
+			<option>Mon</option>
+			<option>Tue</option>
+			<option>Wed</option>
+			<option>Thu</option>
+			<option>Fri</option>
+		</select><br>
+		<label class="field" for="startParam">Start time:</label>
+		<input type="time" id="startParam" name="startParam" required><br>
+		<label class="field" for="endParam">End time:</label>
+		<input type="time" id="endParam" name="endParam" required><br>
+		<label class="field" for="roomParam">Room:</label>
+		<input type="text" id="roomParam" name="roomParam" placeholder="C-301" required><br>
+		<label class="field" for="capacityParam">Capacity:</label>
+		<input type="text" id="capacityParam" name="capacityParam" required><br>
+		<input type="submit" value="Add Section" formaction="./rest/Section/add">
+		<input type="submit" value="Update Section" formaction="./rest/Section/update">
+		<input type="submit" value="Search Section" formaction="./rest/Section/find" formnovalidate>
+		<input type="submit" value="Delete Section" formaction="./rest/Section/delete" formnovalidate>
+	</form>
+	<p class="note">Add: the id is assigned by the system. Search: enter the id; the form comes back filled from the table.
+	Update: change the fields of the record found and press Update. Delete: only the id is used.</p>
+</fieldset>
+
+</body>
+</html>

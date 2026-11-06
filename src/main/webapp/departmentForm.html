@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Department Form</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Department Form</legend>
+	<form method="post">
+		<label class="field" for="departmentIdParam">Department Id:</label>
+		<input type="text" id="departmentIdParam" name="departmentIdParam" placeholder="assigned by the system on Add"><br>
+		<label class="field" for="departmentNameParam">Department name:</label>
+		<input type="text" id="departmentNameParam" name="departmentNameParam" required><br>
+		<label class="field" for="departmentHeadParam">Department head:</label>
+		<input type="text" id="departmentHeadParam" name="departmentHeadParam" required><br>
+		<input type="submit" value="Add Department" formaction="./rest/Department/add">
+		<input type="submit" value="Update Department" formaction="./rest/Department/update">
+		<input type="submit" value="Search Department" formaction="./rest/Department/find" formnovalidate>
+		<input type="submit" value="Delete Department" formaction="./rest/Department/delete" formnovalidate>
+	</form>
+	<p class="note">Add: the id is assigned by the system. Search: enter the id; the form comes back filled from the table.
+	Update: change the fields of the record found and press Update. Delete: only the id is used.</p>
+</fieldset>
+
+</body>
+</html>

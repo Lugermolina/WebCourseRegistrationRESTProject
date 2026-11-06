@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instructor Form</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Instructor Form</legend>
+	<form method="post">
+		<label class="field" for="instructorIdParam">Instructor Id:</label>
+		<input type="text" id="instructorIdParam" name="instructorIdParam" placeholder="assigned by the system on Add"><br>
+		<label class="field" for="firstNameParam">First name:</label>
+		<input type="text" id="firstNameParam" name="firstNameParam" required><br>
+		<label class="field" for="lastNameParam">Last name:</label>
+		<input type="text" id="lastNameParam" name="lastNameParam" required><br>
+		<label class="field" for="emailParam">Email:</label>
+		<input type="email" id="emailParam" name="emailParam" required><br>
+		<label class="field" for="departmentIdParam">Department Id:</label>
+		<input type="text" id="departmentIdParam" name="departmentIdParam" required>
+		<a href="rest/Department" target="_blank">list</a><br>
+		<input type="submit" value="Add Instructor" formaction="./rest/Instructor/add">
+		<input type="submit" value="Update Instructor" formaction="./rest/Instructor/update">
+		<input type="submit" value="Search Instructor" formaction="./rest/Instructor/find" formnovalidate>
+		<input type="submit" value="Delete Instructor" formaction="./rest/Instructor/delete" formnovalidate>
+	</form>
+	<p class="note">Add: the id is assigned by the system. Search: enter the id; the form comes back filled from the table.
+	Update: change the fields of the record found and press Update. Delete: only the id is used.</p>
+</fieldset>
+
+</body>
+</html>

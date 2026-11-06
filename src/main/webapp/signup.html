@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration</title>
+<link rel="stylesheet" href="style.css?v=4">
+<script src="eye.js"></script>
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Student Registration</legend>
+	<form method="post" action="./rest/Student/register">
+		<label class="field" for="firstNameParam">First name:</label>
+		<input type="text" id="firstNameParam" name="firstNameParam" required><br>
+		<label class="field" for="lastNameParam">Last name:</label>
+		<input type="text" id="lastNameParam" name="lastNameParam" required><br>
+		<label class="field" for="emailParam">Email (login username):</label>
+		<input type="email" id="emailParam" name="emailParam" required><br>
+		<label class="field" for="phoneParam">Phone:</label>
+		<input type="tel" id="phoneParam" name="phoneParam" placeholder="514-555-0199" required><br>
+		<label class="field" for="addressParam">Address:</label>
+		<input type="text" id="addressParam" name="addressParam" required><br>
+		<label class="field" for="passwordParam">Password (6 or more):</label>
+		<input type="password" id="passwordParam" name="passwordParam" required><button type="button" class="eye" onclick="togglePassword(this)" title="Show or hide the password"><svg width="24" height="16" viewBox="0 0 24 16"><path d="M1 8 Q12 -4 23 8 Q12 20 1 8 Z" fill="none" stroke="black" stroke-width="1.5"/><circle cx="12" cy="8" r="3" fill="black"/><line x1="3" y1="15" x2="21" y2="1" stroke="black" stroke-width="1.8"/></svg></button><br>
+		<input type="submit" value="Register">
+		<input type="reset" value="Cancel">
+	</form>
+	<p class="note">The student id is assigned by the system.</p>
+</fieldset>
+
+</body>
+</html>

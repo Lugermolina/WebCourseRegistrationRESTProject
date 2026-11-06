@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Course Form</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Course Form</legend>
+	<form method="post">
+		<label class="field" for="courseIdParam">Course Id:</label>
+		<input type="text" id="courseIdParam" name="courseIdParam" placeholder="assigned by the system on Add"><br>
+		<label class="field" for="courseCodeParam">Course code:</label>
+		<input type="text" id="courseCodeParam" name="courseCodeParam" placeholder="SE401" required><br>
+		<label class="field" for="courseNameParam">Course name:</label>
+		<input type="text" id="courseNameParam" name="courseNameParam" required><br>
+		<label class="field" for="creditsParam">Credits:</label>
+		<input type="text" id="creditsParam" name="creditsParam" placeholder="1 to 6" required><br>
+		<label class="field" for="departmentIdParam">Department Id:</label>
+		<input type="text" id="departmentIdParam" name="departmentIdParam" required>
+		<a href="rest/Department" target="_blank">list</a><br>
+		<input type="submit" value="Add Course" formaction="./rest/Course/add">
+		<input type="submit" value="Update Course" formaction="./rest/Course/update">
+		<input type="submit" value="Search Course" formaction="./rest/Course/find" formnovalidate>
+		<input type="submit" value="Delete Course" formaction="./rest/Course/delete" formnovalidate>
+	</form>
+	<p class="note">Add: the id is assigned by the system. Search: enter the id; the form comes back filled from the table.
+	Update: change the fields of the record found and press Update. Delete: only the id is used.</p>
+</fieldset>
+
+</body>
+</html>

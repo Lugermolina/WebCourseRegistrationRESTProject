@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Search the Catalog</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<div class="header">Course Registration System</div>
+<p class="topbar"><a href="rest/User/menu">Main Menu</a><iframe class="status" style="border:0; height:22px; width:520px" src="rest/User/status"></iframe></p>
+
+<fieldset>
+	<legend>Display Courses by Category</legend>
+	<form method="get" action="./rest/Course/byCategory">
+		<label class="field" for="departmentParam">Department:</label>
+		<select id="departmentParam" name="departmentParam">
+			<option value="">All departments</option>
+			<option>Computer Science</option>
+			<option>Mathematics</option>
+			<option>Software Engineering</option>
+			<option>Natural Sciences</option>
+			<option>Humanities and Philosophy</option>
+		</select><br>
+		<label class="field" for="semesterParam">Semester:</label>
+		<select id="semesterParam" name="semesterParam">
+			<option value="">All semesters</option>
+			<option value="Fall">Fall 2026</option>
+			<option value="Winter">Winter 2027</option>
+		</select><br>
+		<input type="submit" value="Show Courses">
+	</form>
+</fieldset>
+
+<fieldset>
+	<legend>Search for a Course</legend>
+	<form method="get" action="./rest/Course/search">
+		<label class="field" for="keywordParam">Code, title or instructor:</label>
+		<input type="text" id="keywordParam" name="keywordParam" placeholder="e.g. SE301, Calculus, Turing" required><br>
+		<input type="submit" value="Search">
+	</form>
+</fieldset>
+
+</body>
+</html>
